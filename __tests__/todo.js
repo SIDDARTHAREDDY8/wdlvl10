@@ -11,6 +11,7 @@ function extractCsrfToken(res) {
   return $("[name=_csrf]").val();
 }
 
+
 const login = async (agent, username, password) => {
   let res = await agent.get("/login");
   let csrfToken = extractCsrfToken(res);
