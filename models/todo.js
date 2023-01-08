@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     }
     deletetodo() {
       return this.removetask(id);
+      
     }
     static getTodos() {
       return this.findAll({ order: [["id", "ASC"]] });
